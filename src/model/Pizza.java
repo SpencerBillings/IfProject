@@ -19,7 +19,6 @@ public class Pizza
 		this.pizzaSize = -99;
 		this.hasCheese = false;
 		this.pepperoniCount = -99;
-		this.greenPepperCount = -99;
 		this.hasStuffedCrust = false;
 	}
 	
@@ -49,11 +48,6 @@ public class Pizza
 		this.pepperoniCount = pepperoni;
 	}
 	
-	public void setGreenPepperCount(int greenPeppers)
-	{
-		this.greenPepperCount = greenPeppers;
-	}
-	
 	public void setHasStuffedCrust(boolean stuffedCrust)
 	{
 		this.hasStuffedCrust = stuffedCrust;
@@ -73,11 +67,6 @@ public class Pizza
 	public int getPepperoni()
 	{
 		return pepperoniCount;
-	}
-	
-	public int getGreenPeppers()
-	{
-		return greenPepperCount;
 	}
 	
 	public boolean getStuffedCrust()
