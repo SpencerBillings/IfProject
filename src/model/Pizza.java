@@ -76,21 +76,24 @@ public class Pizza
 	
 	public String toString()
 	{
+		
+		String yPI = "Your pizza is ";
+		
 		if(hasCheese == true && hasStuffedCrust == true)
 		{
-			return "Your pizza is " + pizzaSize + " inches long, it does have cheese, it has " + pepperoniCount + " slices of pepperoni, and your pizza does have stuffed crust.";
+			return yPI + pizzaSize + " inches long, it does have cheese, it has " + pepperoniCount + " slices of pepperoni, and your pizza does have stuffed crust.";
 		}
 		else if(hasCheese == true && hasStuffedCrust == false)
 		{
-			return "Your pizza is " + pizzaSize + " inches long, it does have cheese, it has " + pepperoniCount + " slices of pepperoni, and your pizza does not have stuffed crust.";
+			return yPI + pizzaSize + " inches long, it does have cheese, it has " + pepperoniCount + " slices of pepperoni, and your pizza does not have stuffed crust.";
 		}
 		else if(hasCheese == false && hasStuffedCrust == false)
 		{
-			return "Your pizza is " + pizzaSize + " inches long, it does not have cheese, it has " + pepperoniCount + " slices of pepperoni, and your pizza does not have stuffed crust.";
+			return yPI + pizzaSize + " inches long, it does not have cheese, it has " + pepperoniCount + " slices of pepperoni, and your pizza does not have stuffed crust.";
 		}
 		else
 		{
-			return "Your pizza is " + pizzaSize + " inches long, it does not have cheese, it has " + pepperoniCount + " slices of pepperoni, and your pizza does have stuffed crust.";
+			return yPI + pizzaSize + " inches long, it does not have cheese, it has " + pepperoniCount + " slices of pepperoni, and your pizza does have stuffed crust.";
 		}
 	}
 }

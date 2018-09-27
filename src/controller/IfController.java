@@ -49,10 +49,10 @@ public class IfController
 		}
 		
 		// Starting Position; Min/Max; Increment
-		for (int pizzaLoop = 0; pizzaLoop >= 3 ; pizzaLoop++)
+		for(int loop = 0; loop < 4 ; loop += 1)
 		{
 			askUser();
-			JOptionPane.showMessageDialog(null, "Pizzas Created: " + pizzaLoop);
+			JOptionPane.showMessageDialog(null, "Pizzas Created: " + loop);
 		}
 	}
 	
@@ -61,14 +61,14 @@ public class IfController
 		Pizza userPizza = new Pizza();
 		
 		String pizzaSize = JOptionPane.showInputDialog(null, "What is the size of your pizza in inches?");
-		while (!validDouble(pizzaSize))
+		while (pizzaSize == null || !validDouble(pizzaSize))
 		{
-			pizzaSize = JOptionPane.showInputDialog(null, "Huh??");
+			pizzaSize = JOptionPane.showInputDialog(null, "Type a double.");
 		}
 		userPizza.setPizzaSize(Double.parseDouble(pizzaSize));
 		JOptionPane.showMessageDialog(null, "Your pizza is " + pizzaSize + " inches.");
 		
-		String hasCheese = JOptionPane.showInputDialog(null, "Does your pizza have cheese?");
+		String hasCheese = JOptionPane.showInputDialog(null, "Does your pizza have cheese? (True/False)");
 		userPizza.setHasCheese(Boolean.parseBoolean(hasCheese));
 		if (userPizza.getCheese())
 		{
@@ -80,14 +80,14 @@ public class IfController
 		}
 		
 		String pepperoniCount = JOptionPane.showInputDialog(null, "How many slices of pepperoni does your pizza have?");
-		while(!validInt(pepperoniCount))
+		while(pepperoniCount == null || !validInt(pepperoniCount))
 		{
-			pepperoniCount = JOptionPane.showInputDialog(null, "What??");
+			pepperoniCount = JOptionPane.showInputDialog(null, "Type an integer.");
 		}
 		userPizza.setPepperoniCount(Integer.parseInt(pepperoniCount));
 		JOptionPane.showMessageDialog(null, "Your pizza has " + pepperoniCount + " slices of pepperoni.");
 		
-		String hasStuffedCrust = JOptionPane.showInputDialog(null, "Does your pizza have stuffed crust?");
+		String hasStuffedCrust = JOptionPane.showInputDialog(null, "Does your pizza have stuffed crust? (True/False)");
 		userPizza.setHasStuffedCrust(Boolean.parseBoolean(hasStuffedCrust));
 		if (userPizza.getStuffedCrust())
 		{
