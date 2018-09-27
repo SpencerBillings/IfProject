@@ -7,7 +7,6 @@ import javax.swing.JOptionPane;
 public class IfController
 {
 //	   Data Members
-	private Pizza myPizza;
 
 //	   Constructors 
 	/**
@@ -49,9 +48,10 @@ public class IfController
 			}
 		}
 		
-//		for (int loop = 0; loop < 30; loop += 2)
+		// Starting Position; Min/Max; Increment
+		for (int loop = 30; loop < 30; loop += 30)
 		{
-//			JOptionPane.showMessageDialog(null, "The loop value is: " + loop);
+			JOptionPane.showMessageDialog(null, "The loop value is: " + loop);
 		}
 	}
 	
@@ -69,7 +69,7 @@ public class IfController
 		
 		String hasCheese = JOptionPane.showInputDialog(null, "Does your pizza have cheese?");
 		userPizza.setHasCheese(Boolean.parseBoolean(hasCheese));
-		if (hasCheese != null)
+		if (userPizza.getCheese())
 		{
 			JOptionPane.showMessageDialog(null, "Your pizza does have cheese.");
 		}
@@ -88,7 +88,7 @@ public class IfController
 		
 		String hasStuffedCrust = JOptionPane.showInputDialog(null, "Does your pizza have stuffed crust?");
 		userPizza.setHasStuffedCrust(Boolean.parseBoolean(hasStuffedCrust));
-		if (hasStuffedCrust != null)
+		if (Boolean.parseBoolean(hasStuffedCrust) != false)
 		{
 			JOptionPane.showMessageDialog(null, "Your pizza does have stuffed crust");
 		}
@@ -96,6 +96,8 @@ public class IfController
 		{
 			JOptionPane.showMessageDialog(null, "Your pizza does not have stuffed crust");
 		}
+		
+		JOptionPane.showMessageDialog(null, userPizza);
 	}
 	
 	
@@ -116,7 +118,7 @@ public class IfController
 		return validInt;
 	}
 	
-	public boolean validDouble(String maybeDouble) 
+	public boolean validDouble(String maybeDouble) 	
 	{
 		boolean validDouble = false;
 		
@@ -132,4 +134,3 @@ public class IfController
 		
 		return validDouble;
 	}
-}
