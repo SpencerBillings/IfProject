@@ -49,9 +49,10 @@ public class IfController
 		}
 		
 		// Starting Position; Min/Max; Increment
-		for (int loop = 30; loop < 30; loop += 30)
+		for (int pizzaLoop = 0; pizzaLoop >= 3 ; pizzaLoop++)
 		{
-			JOptionPane.showMessageDialog(null, "The loop value is: " + loop);
+			askUser();
+			JOptionPane.showMessageDialog(null, "Pizzas Created: " + pizzaLoop);
 		}
 	}
 	
@@ -84,11 +85,11 @@ public class IfController
 			pepperoniCount = JOptionPane.showInputDialog(null, "What??");
 		}
 		userPizza.setPepperoniCount(Integer.parseInt(pepperoniCount));
-		JOptionPane.showMessageDialog(null, "Your pizza has " + pepperoniCount + " slices of pepperon.");
+		JOptionPane.showMessageDialog(null, "Your pizza has " + pepperoniCount + " slices of pepperoni.");
 		
 		String hasStuffedCrust = JOptionPane.showInputDialog(null, "Does your pizza have stuffed crust?");
 		userPizza.setHasStuffedCrust(Boolean.parseBoolean(hasStuffedCrust));
-		if (Boolean.parseBoolean(hasStuffedCrust) != false)
+		if (userPizza.getStuffedCrust())
 		{
 			JOptionPane.showMessageDialog(null, "Your pizza does have stuffed crust");
 		}
@@ -134,3 +135,4 @@ public class IfController
 		
 		return validDouble;
 	}
+}
