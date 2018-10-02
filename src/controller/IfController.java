@@ -14,7 +14,7 @@ public class IfController
 	 */
 	public IfController()
 	{
-		
+
 	}
 
 //	   Methods
@@ -24,7 +24,6 @@ public class IfController
 	public void start()
 	{
 		loopy();
-		askUser();
 	}
 	
 	/**
@@ -48,11 +47,12 @@ public class IfController
 			}
 		}
 		
+		System.out.println("pizzaLoop commencing now.");
 		// Starting Position; Min/Max; Increment
-		for(int loop = 0; loop < 4 ; loop += 1)
+		for (int pizzaLoop = 1; pizzaLoop <= 3; pizzaLoop++)
 		{
 			askUser();
-			JOptionPane.showMessageDialog(null, "Pizzas Created: " + loop);
+			JOptionPane.showMessageDialog(null, "Pizzas Created: " + pizzaLoop);
 		}
 	}
 	
@@ -113,7 +113,7 @@ public class IfController
 		}
 		catch(NumberFormatException error)
 		{
-			JOptionPane.showMessageDialog(null, "Type an integer value.");
+			JOptionPane.showMessageDialog(null, "Type an integer data type.");
 		}
 		
 		return validInt;
@@ -130,9 +130,10 @@ public class IfController
 		}
 		catch(NumberFormatException error)
 		{
-			JOptionPane.showMessageDialog(null, "Huh? Be more specific");
+			JOptionPane.showMessageDialog(null, "Type a double data type.");
 		}
 		
 		return validDouble;
 	}
+
 }
