@@ -3,6 +3,7 @@ package controller;
 //	   Imports
 import model.Pizza;
 import javax.swing.JOptionPane;
+import java.util.ArrayList;
 
 public class IfController
 {
@@ -23,7 +24,9 @@ public class IfController
 	 */
 	public void start()
 	{
+		evenMorePizza();
 		loopy();
+		morePizza();
 	}
 	
 	/**
@@ -53,6 +56,70 @@ public class IfController
 		{
 			askUser();
 			JOptionPane.showMessageDialog(null, "Pizzas Created: " + pizzaLoop);
+		}
+	}
+	
+	private void morePizza()
+	{
+		
+		ArrayList<Pizza> myPizzas = new ArrayList<Pizza>();
+		
+		ArrayList<Integer> myNums = new ArrayList<Integer>();
+		//Have to use a wrapper class to hold a primitive in a list (Capital letter spelling)
+		
+		Pizza samplePizza = new Pizza();
+		Pizza otherPizza = new Pizza();
+		
+		myPizzas.add(samplePizza);
+		myPizzas.add(samplePizza);
+		myPizzas.add(otherPizza);
+	
+		//Standard forward loop
+		//if used to remove you have too change index
+		for (int index= 0; index < myPizzas.size(); index += 1)
+		{
+			//Good for display or minor changes
+			JOptionPane.showMessageDialog(null, myPizzas.get(index).getPizzaSize());
+			
+			//Good for remove, replace, change multiple values
+			Pizza currentPizza = myPizzas.get(index);
+			currentPizza.setPizzaSize(index * (int) (Math.random() * 10));
+			currentPizza.setHasCheese(false);
+		}
+		
+		//Standard backward loop
+		//great for removing
+		for (int index = myPizzas.size() - 1; index >= 0; index -= 1)
+		{
+			
+		}
+	
+		for (Pizza current : myPizzas)
+		{
+			
+		}
+	}
+	
+	private void evenMorePizza()
+	{
+		ArrayList<String> pizzaList = new ArrayList<String>();
+		
+		JOptionPane.showMessageDialog(null, "Commencing evenMorePizza." + pizzaList.get(0));
+		
+		pizzaList.add(0, "Cheese Pizza");
+		
+		for(int index = pizzaList.size() - 1; index >= 0; index -=1)
+		{
+			if(pizzaList.size() >= 3)
+			{
+				pizzaList.remove(3);
+				JOptionPane.showMessageDialog(null, pizzaList.size() + pizzaList.get(0));
+			}
+			else
+			{
+				pizzaList.add("Pepperoni Pizza");
+				JOptionPane.showMessageDialog(null, pizzaList.size() + pizzaList.get(0));
+			}
 		}
 	}
 	

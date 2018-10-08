@@ -6,7 +6,6 @@ public class Pizza
 	private double pizzaSize;
 	private boolean hasCheese;
 	private int pepperoniCount;
-	private int greenPepperCount;
 	private boolean hasStuffedCrust;
 
 	/**
