@@ -24,7 +24,7 @@ public class IfController
 	 */
 	public void start()
 	{
-		evenMorePizza();
+		listedPizza();
 		loopy();
 		morePizza();
 	}
@@ -50,7 +50,7 @@ public class IfController
 			}
 		}
 		
-		System.out.println("pizzaLoop commencing now.");
+		System.out.println("Commencing pizzLoop.");
 		// Starting Position; Min/Max; Increment
 		for (int pizzaLoop = 1; pizzaLoop <= 3; pizzaLoop++)
 		{
@@ -100,25 +100,25 @@ public class IfController
 		}
 	}
 	
-	private void evenMorePizza()
+	private void listedPizza()
 	{
 		ArrayList<String> pizzaList = new ArrayList<String>();
 		
-		JOptionPane.showMessageDialog(null, "Commencing evenMorePizza." + pizzaList.get(0));
+		System.out.println("Commencing evenMorePizza.");
 		
 		pizzaList.add(0, "Cheese Pizza");
 		
-		for(int index = pizzaList.size() - 1; index >= 0; index -=1)
+		for (int index = 0; index < pizzaList.size(); index += 1)
 		{
 			if(pizzaList.size() >= 3)
 			{
-				pizzaList.remove(3);
-				JOptionPane.showMessageDialog(null, pizzaList.size() + pizzaList.get(0));
+				pizzaList.remove(0);
+				JOptionPane.showMessageDialog(null, pizzaList.size() + " " + pizzaList);
 			}
 			else
 			{
 				pizzaList.add("Pepperoni Pizza");
-				JOptionPane.showMessageDialog(null, pizzaList.size() + pizzaList.get(0));
+				JOptionPane.showMessageDialog(null, pizzaList.size() + " " + pizzaList);
 			}
 		}
 	}
