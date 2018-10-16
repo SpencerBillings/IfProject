@@ -104,19 +104,28 @@ public class IfController
 	{
 		ArrayList<String> pizzaList = new ArrayList<String>();
 		
-		System.out.println("Commencing evenMorePizza.");
-		
+		System.out.println("Commencing listedPizza.");
+		/**
+		 * .add(0, "Cheese Pizza") inserts the string "Cheese Pizza" at the very beginning of the ArrayList named pizzaList.
+		 */
 		pizzaList.add(0, "Cheese Pizza");
 		
 		for (int index = 0; index < pizzaList.size(); index += 1)
 		{
 			if(pizzaList.size() >= 3)
 			{
-				pizzaList.remove(0);
+				pizzaList.set(0, "Hawaiian Pizza");
+				/**
+				 * .remove(3) will remove whatever item is in the *fourth* position, no matter what that item is.
+				 */
+				pizzaList.remove(3);
 				JOptionPane.showMessageDialog(null, pizzaList.size() + " " + pizzaList);
 			}
 			else
 			{
+				/**
+				 * .add("Pepperoni Pizza") will append the string "Pepperoni Pizza" to the end of the ArrayList named pizzaList
+				 */
 				pizzaList.add("Pepperoni Pizza");
 				JOptionPane.showMessageDialog(null, pizzaList.size() + " " + pizzaList);
 			}
